@@ -1,0 +1,59 @@
+using System;
+
+namespace PracticeCsharp8._14._2019
+{
+    class Program
+    {
+        //public static object Dog { get; private set; }
+        //it ran with the above but was much slower than when commented out
+
+        static void Main(string[] args)
+        {
+            //Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello Cupcake!");
+            DogMethod();
+            Console.WriteLine("Are you hungry?");
+            DogMethod2();
+            Console.WriteLine("Hello Miss Kitty!");
+            CatMethod();
+            Console.WriteLine("Are you thirsty?");
+            CatMethod2();
+            Counting();
+
+        }
+
+        private static void DogMethod()
+        {
+            Console.WriteLine("BARK, BARK, BARK");
+        }
+
+        private static void DogMethod2()
+        {
+            Console.WriteLine("Kibbles and Bits, please!"); 
+        }
+
+        private static void CatMethod()
+        {
+            Console.WriteLine("Meeeooooow!");
+        }
+
+        private static void CatMethod2()
+        {
+            Console.WriteLine("Prosecco would be purrrrfect!");
+        }
+
+        public static void Counting()
+        {
+            int num1, num2, total;
+            //a = num1;
+            Console.WriteLine("How many cats?");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("How many dogs?");
+            num2 = int.Parse(Console.ReadLine());
+            total = num1 + num2;
+            Console.WriteLine($"{num1} + {num2} = {total}");
+            //return total; tried this while messing around but it is not appropriate
+        }
+
+    }
+}
